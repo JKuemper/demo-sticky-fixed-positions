@@ -7,3 +7,43 @@ section {
     padding: 1rem;
 }
 /* developer styles go here */
+h1{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* Has no direct siblings within the <header> */
+}
+
+h2{
+    background: tomato;
+    padding: 1rem 0.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    position: -webkit-sticky;
+        /* Use for browser support, some browsers don't recognize 'position: sticky' */
+    position: sticky;
+    top: 0;
+        /* 'top: 0' needed to it scroll with the page and stay at the top of viewport */
+    /* This works because the <p> and <h3> are direct siblings of the H2 */
+    /* Sticking positioning can be thought of as a hybrid of Relative and Fixed positioning. A sticky positioned element is treated as relatively positioned until it crosses its specified threshold, at which point it is treated as fixed until it reaches the boundary of its parent element  */
+}
+
+h3{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 68px;
+    background: white;
+}
+
+p{
+    margin-bottom: 1.5rem;
+    max-width: 60ch; 
+        /* ch = characters per line */
+}
+
+.snowflake{
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    z-index: 1;
+}
